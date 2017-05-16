@@ -1,3 +1,5 @@
 
 /.idea/
 /rxjs-tutorial.iml
+/node_modules/
+typings/

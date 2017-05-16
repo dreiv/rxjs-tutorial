@@ -1,0 +1,29 @@
+{
+  "name": "rxjs-tutorial",
+  "version": "1.0.0",
+  "description": "project used for RxJs Tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreiv/rxjs-tutorial.git"
+  },
+  "author": "andrei voicu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreiv/rxjs-tutorial/issues"
+  },
+  "homepage": "https://github.com/dreiv/rxjs-tutorial#readme",
+  "dependencies": {
+    "rxjs": "^5.4.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.2",
+    "typings": "^2.1.1",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
