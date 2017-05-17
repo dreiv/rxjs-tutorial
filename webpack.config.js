@@ -1,6 +1,9 @@
 module.exports = {
   context: __dirname + '/src',
-  entry: './index.ts',
+  devServer: {
+    contentBase: __dirname + '/src'
+  },
+  entry: './index',
   output: {
     filename: 'bundle.js',
     path: __dirname + '/dist'
@@ -8,18 +11,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts$/,
         loader: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       }
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
-  },
-
-  //To run development server
-  devServer: {
-    contentBase: __dirname + '/src'
+    extensions: [".ts", ".js"]
   }
 };
