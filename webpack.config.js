@@ -1,21 +1,25 @@
-
 module.exports = {
-  entry: {
-    app: './main'
-  },
+  context: __dirname + '/src',
+  entry: './index.ts',
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: __dirname + '/dist'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /ts$/,
-        exclude: [/node_modules/],
-        loader: 'ts-loader'
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
       }
     ]
   },
   resolve: {
-    extensions: ['ts', 'js']
+    extensions: [".tsx", ".ts", ".js"]
+  },
+
+  //To run development server
+  devServer: {
+    contentBase: __dirname + '/src'
   }
 };
